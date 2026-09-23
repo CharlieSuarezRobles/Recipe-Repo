@@ -1,6 +1,3 @@
-# Recipe-Repo
-This repository is intended to be used to explain the devs the structure of a fullstack codebase
-
 # Recipe Repo
 
 Recipe Repo is a full-stack web application that is intended to be used to explain the devs the structure of a fullstack codebase. This is a codebase where chefs can create, edit, store, and share recipes with others.
