@@ -1,6 +1,6 @@
 # Week 1
 
-## Broad Goal:
+## Broad Goal
 Our goal for this quarter is to teach you core skills of web development, and to do so, we are going
 to make a small website from end to end.
 

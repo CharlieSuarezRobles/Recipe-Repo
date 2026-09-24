@@ -1,28 +1,27 @@
-# Week 3:
+# Week 3
 
-## Goal:
+## Goal
 In this week, we will start implementing the feature. For now, we will teach you:
-- What the frontend and the backend are
+- A basic definition of the frontend
 - How to set up the frontend of a new project
+- The basic structure of the frontend
 
-### Introduction to frontend and backend
+### Introduction to the frontend
 
-So far, our goal is to have feature 1 be on a website. In other words, we want people to be able to access it through the internet whenever they want to. To build that website, we will write code in a project folder. In our case, that code will make feature 1 possible.
+The **frontend** is the part of our website that creates what chefs see and interact with, such as the recipe form and its buttons. We’ll use several tools to build it:
 
-Now, if you pay attention, whenever your computer is offline, it usually can’t load a website. That suggests that the website’s files are coming from somewhere else. And yes, they are usually provided by a remote computer. When you open a website, your **browser** requests a webpage from that computer. The browser receives files such as HTML, CSS, and JavaScript, displays the page, and runs the JavaScript needed for its interactions.
+- **TypeScript** is a programming language. We’ll use it to write code that controls what happens when a chef interacts with the page. It builds on JavaScript and helps catch some mistakes while we code.
+- **React** is a JavaScript library. A *library* is code written by other developers that we can use in our own project. React helps us build the interface out of pieces called **components**, such as a recipe form or recipe card.
+- **CSS** is a styling language. It controls how the interface looks, including colors, spacing, and layout.
+- **Vite** is a tool that lets us run the frontend on our computer while we build it. It gives us a link we can open in a browser to see the website, and the page updates when we change our code.
 
-The remote computer needs to be available to respond when someone requests the website. We call a computer or program that provides something to other computers a **server**.
+We’ll learn how to use each of these as we build the recipe website.
 
-Another problem we have is that feature 1 requires our website to store recipes. If a user saves a recipe, we want it to still be there when they return and, depending on the feature, to be available from another computer. We therefore need a place to store recipes, such as a **database**, and code that handles requests to save and retrieve them.
+### Why are we creating a new project?
 
-We could put the code that sends webpages and the code that handles recipes on the same server. For this project, though, we will use two separate parts. One serves the files the browser needs to display the website. The other runs code that handles recipe requests and communicates with the database.
+In Week 1, you cloned `Recipe-Repo` and saw that it already contained many files. You might be wondering where those files came from. To find out, we’ll start with an empty folder called `Dummy-Repo` and use a few commands to create a frontend inside it. You’ll see which files the initial setup creates for us.
 
-So, let’s say the user clicks **Save recipe**. JavaScript running in the browser sends the recipe to the second server. That server runs code to check the recipe and save it in the database. It then sends a response to the browser, which can show the user whether the recipe was saved successfully.
-
-With this setup, we can make feature 1 possible. We can call the server that provides the website’s files the **frontend server**, and the server that handles recipe requests the **backend server**. The code that creates the interface and handles interactions in the browser is called the **frontend**. The code that handles the recipe requests on the second server is called the **backend**.
-
-So far, we have thought of our project as one folder containing all its code. However, these two parts have different jobs, so we will organize the project into a **`frontend/`** folder and a **`backend/`** folder. The `frontend/` folder contains the code and tools for building the interface; the `backend/` folder contains the code for handling requests and working with the database.
-
+`Dummy-Repo` is a separate practice project, so we won’t be changing `Recipe-Repo` in this exercise. The steps you learn here will also help you start a new project of your own later.
 
 ### Creating and Opening the Project Directory
 
@@ -171,4 +170,18 @@ Dummy-Repo/
     ├── tsconfig.node.json
     └── vite.config.ts
 ```
+
+### The basic structure of the frontend
+
+When you run the frontend locally and open its link in a browser, these are the main files involved:
+
+1. **`package.json`** contains the `dev` command. When you type `npm run dev`, npm finds that command and starts Vite.
+2. **`index.html`** is the webpage Vite sends to the browser. It contains a place for React to display the interface and points to `src/main.tsx`.
+3. **`src/main.tsx`** starts React and tells it to display the `App` component.
+4. **`src/App.tsx`** defines the main interface you see in the browser. This is one of the files we’ll edit when we start building our recipe website.
+5. **`src/index.css`** and **`src/App.css`** control how the page looks. The TypeScript files import these CSS files so their styles are applied.
+
+This is a useful path to follow when exploring the project, but the files are not all “executed” one after another. For example, CSS provides styling; it does not run like TypeScript code.
+
+You’ll also see other folders and files. **`node_modules/`** contains packages installed with npm, while **`public/`** and **`src/assets/`** can hold images and other assets. Files such as `vite.config.ts`, `eslint.config.js`, and the `tsconfig` files configure the tools we use to develop the frontend. You do not need to understand every one of them before making your first change.
 

@@ -1,22 +1,22 @@
-# Week 2:
+# Week 2
 
-## Goal:
+## Goal
 In this week, we will teach you:
 1. How to design a feature
 2. Set up figma
 
-## Designing a feature:
+## Designing a feature
 
 In our example, we will design feature 1 from last week. To do so, we will follow the next steps:
 
-### 1. Define the user's goal:
+### 1. Define the user's goal
 
 This is what the feature is supposed to achieve.
 
 Example:
 Feature 1 is supposed to be a place in which chefs can type, save, and see all the recipes they've saved.
 
-### 2. Determine the information that needs to permanently be stored:
+### 2. Determine the information that needs to permanently be stored
 
 For feature 1, we need to store the following:
 
@@ -27,7 +27,7 @@ For feature 1, we need to store the following:
 - Ingredients
 - Instructions
 
-### 3. Describe the user flow:
+### 3. Describe the user flow
 
 We describe the set of actions the user needs to take to solve the problem the feature addresses along with the effect that each of the actions will have on the website:
 
@@ -53,7 +53,7 @@ We describe the set of actions the user needs to take to solve the problem the f
    - The website opens the **Recipes** page.
    - The saved recipe appears on the page.
 
-### 4. Find edge cases and see how you could handle them:
+### 4. Find edge cases and see how you could handle them
 
 These are cases that are not part of the normal flow or in other words, cases that can break things. To find such, you need to look at each of the steps in the user flow that you defined and think about the assumptions that you made about each step.
 
@@ -72,7 +72,7 @@ For feature 1, the edge cases and how we address them are:
 - Edge case: The chef clicks on **save** but the website fails to save the recipe.
 - Solution: Tell the chef **Failed to save recipe** and maybe tell them why such thing happened
 
-### 5. Define completion criteria:
+### 5. Define completion criteria
 
 To define such, we combine all the steps we defined in the user flow with all the edge cases along with their solutions. This is because if the developers have coded a feature that can do all of this, then it can do everything that we expect it to do.
 
@@ -108,7 +108,7 @@ So, the completion criteria is:
 - Edge case: The chef clicks on **save** but the website fails to save the recipe.
 - Solution: Tell the chef **Failed to save recipe** and maybe tell them why such thing happened
 
-### 6. Design the interface:
+### 6. Design the interface
 
 This is the step in which we design how everything within the feature is going to look like. These are the buttons, images, webpages, and other visual stuff. There are apps that help us design stuff quickly. The one we use in TSE is called **Figma**. 
 
@@ -116,11 +116,11 @@ There are many considerations one needs to take when designing a feature and eve
 
 You can see the design for Feature 1 in the following [Figma design](https://www.figma.com/design/8hsncacL9ABEkdrO0P9CIE/Untitled?node-id=0-1&p=f&t=x33SJU8SsGr6l9c8-0).
 
-### Next steps:
+### Next steps
 
 You would keep going through all these steps to design each feature. Generally, the designers and the PM are the ones that do these. After a few features have been thought out, it will be time for the developers to start implementing them one by one or even several at the same time, from the ones that have the most priority to the ones that have the least. We don't want to implement all at the same time because 1, we never know all the features our website would need and 2, it's better to have a feature done than having several half way. So, using this approach and to keep things simple, we will talk about how to implement feature 1 next week.
 
-## Setting up Figma:
+## Setting up Figma
 
 Now, it's time to get Figma. This is the app that designers use to make the UI for every feature and the one that developers use to know how the designers want the feature to look like. To install it, do the following steps:
 
